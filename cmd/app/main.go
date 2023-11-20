@@ -78,7 +78,7 @@ func compareWords(word string, userInput string) []int {
 
 func gameLoop(word string, words []string) {
 	n := len(word)
-	fmt.Println("⬜ ⬜ ⬜ ⬜ ⬜ ")
+	fmt.Println(strings.Repeat("⬜ ", n))
 	reader := bufio.NewReader(os.Stdin)
 	for try := 0; try < 6; try++ {
 		s, err := reader.ReadString('\n')
@@ -119,6 +119,5 @@ func main() {
 	}
 
 	word := selectRandomWord(&words)
-	fmt.Println(word)
 	gameLoop(word, words)
 }
