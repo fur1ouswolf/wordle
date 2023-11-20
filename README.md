@@ -1,0 +1,2 @@
+# wordle
+🎮 Simple console game
